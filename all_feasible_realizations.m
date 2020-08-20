@@ -21,8 +21,8 @@ average_degree = sum(sum(ConnectivityM))/nClean;
 ground_truth = points; % ground truth
 realization_init = zeros(nClean,2,1);
 realization_flip = zeros(nClean,2,1); % realization_flip 与 realization_init 一一对应
-realization_possible = zeros(nClean,2,1); % realization_init 与 realization_flip 的并集
-realization_feasible = zeros(nClean,2,1); % realization_possible 里面符合 CFFC 的子集
+realization_possible = zeros(nClean,2,1); % 全部 possible
+realization_feasible = zeros(nClean,2,1); % realization_init 与 realization_flip 的并集
 
 if switch_plots
     plotgraph([],points'*Boxscale,ConnectivityM,'Network Topo');
